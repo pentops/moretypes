@@ -9,9 +9,3 @@ func (d *Decimal) AsBig() *big.Rat {
 	}
 	return val
 }
-
-func DecimalFromBig(val *big.Rat) (*Decimal, error) {
-	denom := val.Denom()
-
-	return &Decimal{String_: val.FloatString(0)}
-}
